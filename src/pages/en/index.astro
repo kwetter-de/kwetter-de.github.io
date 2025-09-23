@@ -1,0 +1,10 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HomeHeadline from '../../components/HomeHeadline.astro';
+
+const pageTitle = "Hello!";
+---
+
+<Layout pageTitle={pageTitle}>
+	<HomeHeadline>{pageTitle}</HomeHeadline>
+</Layout>

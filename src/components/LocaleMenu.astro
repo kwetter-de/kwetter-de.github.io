@@ -1,0 +1,11 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { i18n } from "astro:config/client";
+---
+<ul class="flex gap-4 justify-end p-4">
+	{i18n?.locales.map((locale) => (
+		<li>
+			<a class={`block p-1 border-2 uppercase ${Astro.currentLocale === locale && 'text-gray-500 border-gray-500'}`} href={getRelativeLocaleUrl(locale)}>{locale}</a>
+		</li>
+	))}
+</ul>

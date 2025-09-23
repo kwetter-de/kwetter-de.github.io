@@ -6,6 +6,16 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
+  i18n: {
+    locales: [
+      "de",
+      "en"
+    ],
+    defaultLocale: "de",
+    fallback: {
+      en: "de"
+    },
+  },
   integrations: [
     sitemap({
       i18n: {

@@ -5,7 +5,12 @@ import { i18n } from "astro:config/client";
 <ul class="flex gap-4 justify-end p-4">
 	{i18n?.locales.map((locale) => (
 		<li>
-			<a class={`block p-1 border-2 uppercase ${Astro.currentLocale === locale && 'text-gray-500 border-gray-500'}`} href={getRelativeLocaleUrl(locale)}>{locale}</a>
+			<a class={`block px-3 py-1 rounded border-2 uppercase transition-colors duration-200
+				${Astro.currentLocale === locale
+					? 'text-gray-500 border-gray-500 bg-gray-100 cursor-default'
+					: 'text-cyan-600 border-cyan-600 hover:bg-cyan-50 hover:border-cyan-800'}`}
+				href={getRelativeLocaleUrl(locale)}
+				aria-current={Astro.currentLocale === locale ? "page" : undefined}>{locale}</a>
 		</li>
 	))}
 </ul>

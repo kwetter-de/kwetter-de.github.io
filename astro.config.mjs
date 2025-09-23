@@ -27,7 +27,7 @@ export default defineConfig({
       }
     })
   ],
-  site: 'https://kwetter-de.github.io',
+  site: 'https://www.kwetter.de',
   vite: {
     plugins: [tailwindcss()]
   }
